@@ -21,6 +21,8 @@ public class answerToQueries {
         creditValueForMetal.storeCreditValueOfMetal("pish pish Iron is 3910 Credits");
         assertEquals("pish tegj glob glob is 42",merchantGalaxy.handleQueries("how much is pish tegj glob glob ?"));
         assertEquals("glob prok Silver is 68 Credits",merchantGalaxy.handleQueries("how many Credits is glob prok Silver ?"));
+        assertEquals("glob prok Gold is 57800 Credits",merchantGalaxy.handleQueries("how many Credits is glob prok Gold ?"));
+        //assertEquals("glob prok Iron is 782 Credits",merchantGalaxy.handleQueries("how many Credits is glob prok Iron ?"));
     }
 
 }

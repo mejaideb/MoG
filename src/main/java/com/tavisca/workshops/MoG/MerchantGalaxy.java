@@ -1,4 +1,5 @@
 package com.tavisca.workshops.MoG;
+
 public class MerchantGalaxy {
 
     public String handleQueries(String query) {
@@ -12,7 +13,19 @@ public class MerchantGalaxy {
     }
 
     private String handleCreditQueries(String query) {
-        return "";
+        String[] words = parseQueryStatement(query);
+        return getValueForMetals(words);
+    }
+
+    private String getValueForMetals(String[] words) {
+        String roman = "";
+        String metalName = words[words.length - 1];
+        String result = "";
+        for (int i = 0; i < words.length - 1; i++) {
+            roman += MapValidator.galacticWordRomanMap.get(words[i]);
+            result += words[i] + " ";
+        }
+        return result + metalName + " is " + RomanToInteger.convertRomanToInteger(roman) * CreditValueForMetal.metalCreditValueMap.get(metalName) + " Credits";
 
     }
 
@@ -22,12 +35,17 @@ public class MerchantGalaxy {
         for (String word : words) {
             roman += MapValidator.galacticWordRomanMap.get(word);
             result += word + " ";
-            System.out.println(RomanToInteger.convertRomanToInteger(roman));
         }
-        return result +"is "+RomanToInteger.convertRomanToInteger(roman);
+        return result + "is " + RomanToInteger.convertRomanToInteger(roman);
     }
 
     private String handleRomanQueries(String query) {
+        String[] words = parseQueryStatement(query);
+        return getValueForGalacticWords(words);
+
+    }
+
+    private String[] parseQueryStatement(String query) {
         String[] parseRomanQuery = query.split(" ");
         int indexOfIs = -1;
         int indexOfQuestionMark = -1;
@@ -42,7 +60,6 @@ public class MerchantGalaxy {
         String[] words = new String[indexOfQuestionMark - indexOfIs - 1];
         for (int i = indexOfIs + 1; i < indexOfQuestionMark; i++)
             words[c++] = parseRomanQuery[i];
-        return getValueForGalacticWords(words);
-
+        return words;
     }
 }
