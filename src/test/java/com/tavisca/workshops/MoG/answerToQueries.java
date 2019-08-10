@@ -22,6 +22,7 @@ public class answerToQueries {
         assertEquals("pish tegj glob glob is 42",merchantGalaxy.handleQueries("how much is pish tegj glob glob ?"));
         assertEquals("glob prok Silver is 68 Credits",merchantGalaxy.handleQueries("how many Credits is glob prok Silver ?"));
         assertEquals("glob prok Gold is 57800 Credits",merchantGalaxy.handleQueries("how many Credits is glob prok Gold ?"));
+        assertEquals("I have no idea what you are talking about",merchantGalaxy.handleQueries("how much wood could a woodchuck chuck if a woodchuck could chuck wood ?"));
         //assertEquals("glob prok Iron is 782 Credits",merchantGalaxy.handleQueries("how many Credits is glob prok Iron ?"));
     }
 
