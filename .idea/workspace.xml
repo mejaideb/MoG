@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b11c6d55-4b6c-42b0-a451-884cff792ffa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.infra/jenkins/Jenkins" beforeDir="false" afterPath="$PROJECT_DIR$/.infra/jenkins/Jenkins" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="96" />
+    <option name="myElementSize" value="133" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -113,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.infra/jenkins/Jenkins">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+            <state relative-caret-position="100">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -392,9 +390,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="answerToQueries_answerToQueries - 2019.08.10 at 23h 58m 57s.xml">
-      <configuration name="answerToQueries.answerToQueries" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="answerToQueries_answerToQueries - 2019.08.10 at 23h 59m 05s.xml">
       <configuration name="answerToQueries.answerToQueries" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -422,12 +417,15 @@
     <history-entry file="Tests_in_'com_tavisca_workshops_MoG' - 2019.08.13 at 19h 26m 07s.xml">
       <configuration name="Tests in 'com.tavisca.workshops.MoG'" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="Tests_in_'com_tavisca_workshops_MoG' - 2019.08.13 at 23h 47m 34s.xml">
+      <configuration name="Tests in 'com.tavisca.workshops.MoG'" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -436,7 +434,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.14566284" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31423897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -445,7 +443,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.20949264" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.33509833" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.11119516" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -461,7 +459,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MerchantOfGalaxy$Tests_in__com_tavisca_workshops_MoG_.ic" NAME="Tests in 'com.tavisca.workshops.MoG' Coverage Results" MODIFIED="1565704558321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MerchantOfGalaxy$Tests_in__com_tavisca_workshops_MoG_.ic" NAME="Tests in 'com.tavisca.workshops.MoG' Coverage Results" MODIFIED="1565720245161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/MerchantOfGalaxy$answerToQueries_answerToQueries.ic" NAME="answerToQueries.answerToQueries Coverage Results" MODIFIED="1565704471121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
@@ -595,8 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.infra/jenkins/Jenkins">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        <state relative-caret-position="100">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
         </state>
       </provider>
     </entry>
