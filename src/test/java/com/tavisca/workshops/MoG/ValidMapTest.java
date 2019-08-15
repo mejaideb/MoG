@@ -1,7 +1,8 @@
 package com.tavisca.workshops.MoG;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class ValidMapTest {
 
@@ -32,8 +33,8 @@ public class ValidMapTest {
         creditValueForMetal.storeCreditValueOfMetal("glob prok Gold is 57800 Credits");
         creditValueForMetal.storeCreditValueOfMetal("pish pish Iron is 3910 Credits");
 
-        assertEquals(17,creditValueForMetal.getValueForMetals("Silver"),0.001);
-        assertEquals(14450,creditValueForMetal.getValueForMetals("Gold"),0.001);
-        assertEquals(195.5,creditValueForMetal.getValueForMetals("Iron"),0.5);
+        Assert.assertEquals(17,creditValueForMetal.getValueForMetals("Silver"),0.001);
+        Assert.assertEquals(14450,creditValueForMetal.getValueForMetals("Gold"),0.001);
+        Assert.assertEquals(195.5,creditValueForMetal.getValueForMetals("Iron"),0.5);
     }
 }

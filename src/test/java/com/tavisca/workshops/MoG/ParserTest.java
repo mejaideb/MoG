@@ -1,7 +1,12 @@
 package com.tavisca.workshops.MoG;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.*;
+
+import javax.security.auth.login.CredentialException;
+
+import static org.junit.Assert.assertArrayEquals;
+
 
 public class ParserTest {
 
