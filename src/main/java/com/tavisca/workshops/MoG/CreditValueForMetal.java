@@ -12,11 +12,11 @@ public class CreditValueForMetal {
     public static HashMap<String, Integer> metalCreditValueMap = new HashMap<>();
 
     public int getValueForMetals(String metal) {
-        return metalCreditValueMap.get(metal);
+        return getCreditValueForMetal(metalCreditValueMap.get(metal));
 
     }
 
-    public int storeCreditValueOfMetal(String statement) {
+    public static void storeCreditValueOfMetal(String statement) {
         CreditTokenParser creditTokenParser = new CreditTokenParser();
         RomanToInteger romanToInteger = new RomanToInteger();
         String[] metal = creditTokenParser.parseCreditStatement(statement);
@@ -28,7 +28,11 @@ public class CreditValueForMetal {
         }
         int result = Integer.parseInt(creditValue) / romanToInteger.convertRomanToInteger(roman);
         metalCreditValueMap.put(metalName, result);
-        return result;
+        getCreditValueForMetal(result);
 
+    }
+
+    private static int getCreditValueForMetal(int result) {
+        return result;
     }
 }

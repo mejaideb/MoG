@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class MapValidator {
 
-    private RomanToInteger romanToInteger;
+    private static RomanToInteger romanToInteger;
 
     public MapValidator(RomanToInteger romanToInteger) {
         this.romanToInteger = romanToInteger;
@@ -17,14 +17,14 @@ public class MapValidator {
 
     }
 
-    public void storeRomanOfGalacticWordInMap(String word) {
+    public static void storeRomanOfGalacticWordInMap(String word) {
         WordToRomanParser wordToRomanParser = new WordToRomanParser();
         String[] galacticWord = wordToRomanParser.wordToRomanParse(word);
         if (isValid(galacticWord[1].charAt(0)))
             galacticWordRomanMap.put(galacticWord[0], galacticWord[1].charAt(0));
     }
 
-    private boolean isValid(char roman) {
+    private static boolean isValid(char roman) {
         return romanToInteger.romanToIntegerMap.containsKey(roman);
 
     }
