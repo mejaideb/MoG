@@ -26,7 +26,7 @@ val jar by tasks.getting(Jar::class) {
     manifest {
 
 
-        attributes["Main-Class"] = "ccom.tavisca.workshops.MoG.ClassificationParser"
+        attributes["Main-Class"] = "com.tavisca.workshops.MoG.ClassificationParser"
 
 
     }

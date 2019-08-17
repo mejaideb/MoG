@@ -14,7 +14,7 @@ public class ClassificationParser {
 
         try {
             reader = new BufferedReader(new FileReader(
-                    "C:\\Users\\jmandal\\Desktop\\taviscaday1\\MerchantOfGalaxy\\src\\main\\java\\com\\tavisca\\workshops\\MoG\\InputFile"));
+                    "inputfile.txt"));
             String input = reader.readLine();
             while (input != null) {
                 if (input.endsWith("I") || input.endsWith("V") || input.endsWith("X") || input.endsWith("C") || input.endsWith("L") || input.endsWith("D") || input.endsWith("M")) {
