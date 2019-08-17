@@ -35,6 +35,7 @@ pipeline {
             steps {
                 sh script: '''
                     echo "I am Building DockerImage ="
+                    docker build -t mog:1 .
                 ''',
             label: "Building Docker Image"
             }
@@ -44,6 +45,8 @@ pipeline {
             steps {
                 sh script: '''
                     echo "I am Pubishing DockerImage ="
+                    docker tag mog:1 mejaideb/merchantofgalaxy
+                    docker push mejaideb/merchantofgalaxy
                 ''',
             label: "Publishing Docker Image"
             }
