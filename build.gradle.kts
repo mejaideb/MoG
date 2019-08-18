@@ -1,7 +1,20 @@
 
-
 plugins {
     java
+    `java-gradle-plugin`
+}
+
+gradlePlugin {
+    plugins {
+        create("myPlugins") {
+            id = "my-plugin"
+            implementationClass = "com.tavisca.workshops.MoG.ClassificationParser"
+        }
+    }
+}
+
+dependencies {
+    compileOnly(gradleApi())
 }
 
 group = "com.tavisca.workshops.Mog"
