@@ -40,9 +40,9 @@ pipeline {
 		label: "Running Sonarqube Scan"
 	}
 	}
-           
-  
-        
+
+
+
         stage('Build DockerImage')
         {
             steps {
@@ -57,12 +57,13 @@ pipeline {
         stage('Publish DockerImage')
         {
             steps {
-                
+
 		    withDockerRegistry([ credentialsId: "9cc2e9f9-a37f-42c6-b610-8c3058792a44" , url:""]){
                     sh 'docker push mejaideb/merchantofgalaxy'
 		     }
         }
     }
+  }
     post{
     always{
     		deleteDir()
