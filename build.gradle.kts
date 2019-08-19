@@ -1,17 +1,9 @@
 
 plugins {
     java
-    `java-gradle-plugin`
+  id("org.sonarqube").version("2.7")
 }
 
-gradlePlugin {
-    plugins {
-        create("myPlugins") {
-            id = "my-plugin"
-            implementationClass = "com.tavisca.workshops.MoG.ClassificationParser"
-        }
-    }
-}
 
 dependencies {
     compileOnly(gradleApi())
