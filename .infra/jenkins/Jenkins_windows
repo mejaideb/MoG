@@ -1,0 +1,50 @@
+pipeline {
+    agent {label "windows_machine"}
+    stages {
+        stage('Build') {
+            steps {
+               bat label: '', script: '''echo "Building the project"
+               gradlew.bat build -x test
+               '''
+            }
+        }
+        stage('Test')
+        {
+            steps {
+                bat label: '', script: '''echo "Testing the project"
+                gradlew.bat test
+                '''
+            }
+        }
+        stage('Static Code Analysis')
+        {
+            steps {
+               bat label: '', script: '''
+               echo "Analysing static code"
+               '''
+            }
+        }
+        stage('Build DockerImage')
+        {
+            steps {
+                bat label: '', script: '''
+                echo "Building docker image"
+                docker build -t mog:1 .
+                '''
+            }
+        }
+        stage('Publish DockerImage')
+        {
+            steps {
+               bat label: '', script: '''echo "I am Publishing Docker"
+               docker tag mog:1 mejaideb/merchantgalaxy
+               docker push mejaideb/merchantgalaxy'''
+            }
+        }
+    }
+    post{
+    always{
+    		deleteDir()
+		}
+	}
+}

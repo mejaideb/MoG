@@ -1,0 +1,72 @@
+pipeline {
+    agent any
+    environment {
+    registry = "mejaideb/merchantofgalaxy"
+    registryCredential = '9cc2e9f9-a37f-42c6-b610-8c3058792a44'
+}
+
+    stages {
+        stage('Build') {
+            steps {
+                sh script: '''
+                    echo "I am in build step!"
+                    chmod 777 gradlew
+                    ./gradlew build
+                ''',
+            label: "Building Project"
+            }
+        }
+        stage('Test')
+        {
+            steps {
+                sh script: '''
+                    echo "I am in Test step"
+                    ./gradlew test
+                ''',
+            label: "Running Unit Test Cases"
+            }
+        }
+        stage('Static Code Analysis')
+        {
+	steps {
+	sh script: '''
+		echo "I am in Sonarqube scan"
+		./gradlew sonarqube \
+  -Dsonar.projectKey=merchantofgalaxy \
+  -Dsonar.organization=mejaideb \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=8baa59f3e5c32264ff4344f9bcef8087e9ebf37b
+		''',
+		label: "Running Sonarqube Scan"
+	}
+	}
+
+
+
+        stage('Build DockerImage')
+        {
+            steps {
+                sh script: '''
+                    echo "I am Building DockerImage ="
+                    docker build -t mog:1 .
+		    docker tag mog:1 mejaideb/merchantofgalaxy
+                ''',
+            label: "Building Docker Image"
+            }
+        }
+        stage('Publish DockerImage')
+        {
+            steps {
+
+		    withDockerRegistry([ credentialsId: "9cc2e9f9-a37f-42c6-b610-8c3058792a44" , url:""]){
+                    sh 'docker push mejaideb/merchantofgalaxy'
+		     }
+        }
+    }
+  }
+    post{
+    always{
+    		deleteDir()
+		}
+	}
+}
